@@ -4,10 +4,15 @@ const mensagemErro = document.getElementById('mensagem-erro'); // Seleciona o el
 
 function validarCampos(nome, idade, cidade){
     if(!nome || !idade || !cidade){
-
+        alert("Preencha todos os campos")
         mensagemErro.textContent = 'Todos os campos são obrigatórios!';
     return false
     }
+
+    if (isNaN(idade) || idade < 0) {
+            mensagemErro.textContent = 'Idade deve ser um número válido!'; // Valida idade
+            return false;
+        }
 }
 
 botaoCadastrar.addEventListener('click', () => {
@@ -21,3 +26,7 @@ botaoCadastrar.addEventListener('click', () => {
     }
 }
 )
+
+function adicionarLinha(nome, idade, cidade) {
+    const novaLinha = document.createElement('tr'); // Cria uma nova linha
+}
