@@ -1,4 +1,5 @@
 const form = document.getElementById('form-cadastro'); // Seleciona o formulário
+const botaoCadastrar = document.getElementById('botao-cadastrar'); // Seleciona o botão
 
 function validarCampos(nome, idade, cidade){
     if(!nome || !idade || !cidade){
