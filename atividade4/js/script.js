@@ -9,7 +9,9 @@ function alterarTema() {
 body.classList.toggle('tema-escuro'); // Alterna a classe do corpo para tema escuro
 if (body.classList.contains('tema-escuro')) {
     imagemTema.src = imagemLua; // Muda a imagem para a lua
+    imagemTema.alt = 'Lua'; // Atualiza o texto alternativo para Lua
 } else {
     imagemTema.src = imagemSol; // Muda a imagem para o sol
+    imagemTema.alt = 'Sol'; // Atualiza o texto alternativo para Sol
 }
 }
