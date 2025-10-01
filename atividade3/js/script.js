@@ -7,3 +7,15 @@ function validarCampos(nome, idade, cidade){
     return false
     }
 }
+
+botaoCadastrar.addEventListener('click', () => {
+    const nome = document.getElementById('nome').value.trim(); // recebendo o nome
+    const idade = document.getElementById('idade').value.trim(); // recebendo a idade
+    const cidade = document.getElementById('cidade').value.trim(); // recebendo a cidade
+   
+    if(validarCampos(nome, idade, cidade)){ // Verifica se os campos são válidos
+        alert("Cadastrado com sucesso")
+        form.reset(); // Limpa o formulário após cadastro
+    }
+}
+)
