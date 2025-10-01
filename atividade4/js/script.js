@@ -1,5 +1,6 @@
 const imagemTema = document.getElementById('imagem-tema'); // Seleciona a imagem do tema
 const body = document.body; // Seleciona o corpo do documento
+const botaoTema = document.getElementById('botao-tema'); // Seleciona o botão para alterar o tema
 
 const imagemSol = 'https://img.icons8.com/color/96/000000/sun.png'; // URL da imagem do sol
 const imagemLua = 'https://img.icons8.com/color/96/000000/moon.png'; // URL da imagem da lua
@@ -17,3 +18,5 @@ if (body.classList.contains('tema-escuro')) {
 }
 
 body.classList.add('tema-claro'); // Define o tema claro como padrão
+
+botaoTema.addEventListener('click', alterarTema); // Adiciona o evento de clique ao botão para alterar o tema
