@@ -15,3 +15,5 @@ if (body.classList.contains('tema-escuro')) {
     imagemTema.alt = 'Sol'; // Atualiza o texto alternativo para Sol
 }
 }
+
+body.classList.add('tema-claro'); // Define o tema claro como padrão
