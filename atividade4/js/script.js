@@ -7,4 +7,9 @@ const imagemLua = 'https://img.icons8.com/color/96/000000/moon.png'; // URL da i
 
 function alterarTema() {
 body.classList.toggle('tema-escuro'); // Alterna a classe do corpo para tema escuro
+if (body.classList.contains('tema-escuro')) {
+    imagemTema.src = imagemLua; // Muda a imagem para a lua
+} else {
+    imagemTema.src = imagemSol; // Muda a imagem para o sol
+}
 }
