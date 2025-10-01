@@ -1,9 +1,10 @@
 const form = document.getElementById('form-cadastro'); // Seleciona o formulário
 const botaoCadastrar = document.getElementById('botao-cadastrar'); // Seleciona o botão
+const mensagemErro = document.getElementById('mensagem-erro'); // Seleciona o elemento para erros
 
 function validarCampos(nome, idade, cidade){
     if(!nome || !idade || !cidade){
-        alert("Preencha todos os campos")
+
         mensagemErro.textContent = 'Todos os campos são obrigatórios!';
     return false
     }
