@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("O valor minimo deve ser menor que o maximo"); // Valida se o valor mínimo é menor que o máximo
         } else if (quantidade > (maximo - minimo + 1)) {
             alert("A quantidade de números solicitada excede o intervalo disponível."); // Valida se a quantidade solicitada é possível dentro do intervalo
+        } else {
+            const numeros = sortearNumeros(minimo, maximo, quantidade); // Realiza o sorteio dos números
+            resultado.textContent = `Números sorteados: ${numeros.join(', ')}`; // Exibe os números sorteados
         }
     });
 });
