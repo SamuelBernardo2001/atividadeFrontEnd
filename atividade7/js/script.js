@@ -63,7 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //criando um evento de clique para verificar o nome do pokemon
-    document.getElementById("botao-verificar-nome").addEventListener("click", () => {});
+    document.getElementById("botao-verificar-nome").addEventListener("click", () => {
+        if(!pokemonEscolhido) return; 
+    });
 
 
 });
