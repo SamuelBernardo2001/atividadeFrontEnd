@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const minimo = parseInt(document.getElementById('minimo').value); // Obtém o valor mínimo
         const maximo = parseInt(document.getElementById('maximo').value); // Obtém o valor máximo
 
-        if(isNaN(quantidade) || isNaN(minimo) || isNaN(maximo)){}
+        if(isNaN(quantidade) || isNaN(minimo) || isNaN(maximo)){
+            alert("Preencha todos os campos corretamente"); // Valida se os campos estão preenchidos corretamente
+        } else if (minimo >= maximo) {
+            alert("O valor minimo deve ser menor que o maximo"); // Valida se o valor mínimo é menor que o máximo
+        }
     });
 });
