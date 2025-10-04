@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('Erro ao buscar o Pokémon');
             }
             const dados = await resposta.json(); // Converte a resposta para JSON
-            pokemonEscolhido = dados;
+            pokemonEscolhido = dados; // Armazena os dados do Pokémon escolhido
 
-            nomePokemon.textContent = "???";
-           
+            nomePokemon.textContent = "???"; // Oculta o nome do Pokémon inicialmente
+            imagemPokemon.src = dados.sprites.front_default; 
 
         } catch (erro) {
         }
