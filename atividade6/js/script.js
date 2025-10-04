@@ -11,4 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return Array.from(numerosSorteados); // Converte o Set de volta para um array
     }
+
+    botaoSorteio.addEventListener('click', (event) => {
+        
+    });
 });
