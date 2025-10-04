@@ -84,7 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //criando um evento de clique para verificar a geraçao do pokemon
     document.getElementById("botao-verificar-geracao").addEventListener("click", () => {
-        if(!pokemonEscolhido) return; 
+        if(!pokemonEscolhido) return; // Se nenhum Pokémon foi escolhido, sai da função
+
+        const respostaUsuario = inputGeracao.value.toLowerCase().trim(); 
     });
 
 
