@@ -89,9 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const respostaUsuario = inputGeracao.value.toLowerCase().trim(); // Obtém a resposta do usuário
         const geracaoPokemon = converterGeracao(pokemonEscolhido.geracao); // Converte a geração do Pokémon para um formato comparável
 
-         if (respostaUsuario === geracaoPokemon || respostaUsuario === pokemonEscolhido.geracao) { 
-             msgGeracao.textContent = "✅ Acertou a geração!";  
-            etapaTipo.classList.remove("hidden"); 
+         if (respostaUsuario === geracaoPokemon || respostaUsuario === pokemonEscolhido.geracao) { // Compara a resposta com a geração do Pokémon
+             msgGeracao.textContent = "✅ Acertou a geração!";  // Mensagem de acerto
+            etapaTipo.classList.remove("hidden"); // Libera próxima etapa
+            }else {
+                 msgGeracao.textContent = `❌ Geração errada! Era ${geracaoPokemon}`;
     }
     });
 
