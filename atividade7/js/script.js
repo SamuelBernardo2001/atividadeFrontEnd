@@ -44,7 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // criando um objetivo mas simplificado para armazenar as informaçoes que queremos do pokemon
             pokemonEscolhido = {
-    
+                nome: dados.name.toLowerCase(), // Nome do Pokémon em minúsculas
+                tipo: dados.types.map(t => t.types.name), // Array de tipos do Pokémon, Lista de tipos (pode ter 2 tipos)
+                geracao: especieDados.generation.name, // Geração do Pokémon
+                imagem: dados.sprites.front_default // Imagem do Pokémon
             }
 
         } catch (erro) {
