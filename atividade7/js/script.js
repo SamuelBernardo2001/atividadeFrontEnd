@@ -159,5 +159,8 @@ const tiposPT = {
   fairy: ["fairy", "fada"]
 };
 
+// Quando o usuário clica no botão "Gerar Pokémon"
+  botaoPokemon.addEventListener("click", gerarPokemon);
+
 
 });
