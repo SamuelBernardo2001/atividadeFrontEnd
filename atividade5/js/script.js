@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
             contador.style.color = 'red'; // Muda a cor do contador para vermelho se o limite for excedido
             textarea.value = textarea.value.substring(0, limite);   // Limita o texto ao máximo permitido
         } else {
-            contador.style.color = 'black';
+            contador.style.color = 'black'; // Mantém a cor padrão se dentro do limite
         }
     }
+    textarea.addEventListener('input', atualizarContador); // Atualiza o contador a cada entrada de texto
 });    // Garante que o DOM esteja carregado antes de executar o script
