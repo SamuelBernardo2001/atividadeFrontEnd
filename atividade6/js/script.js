@@ -4,6 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultado = document.getElementById('resultado');
 
     function sortearNumeros(min, max,qtd){
-        
+        const numerosSorteados = new Set();
     }
 });
