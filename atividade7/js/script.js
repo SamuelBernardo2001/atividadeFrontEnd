@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let pokemonEscolhido = null;    // Variável para armazenar o Pokémon escolhido
 
     async function buscarPokemon() {  
-    
+        msgNome.textContent = "";
+        msgGeracao.textContent = "";
+        msgTipo.textContent = "";
     }
 });
