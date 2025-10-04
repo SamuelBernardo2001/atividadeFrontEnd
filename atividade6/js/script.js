@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     botaoSorteio.addEventListener('click', (event) => {
         const quantidade = parseInt(document.getElementById('quantidade').value); // Obtém a quantidade de números
-        const minimo = parseInt(document.getElementById('minimo').value);
-        const maximo = parseInt(document.getElementById('maximo').value);
+        const minimo = parseInt(document.getElementById('minimo').value); // Obtém o valor mínimo
+        const maximo = parseInt(document.getElementById('maximo').value); // Obtém o valor máximo
+
+        if(isNaN(quantidade) || isNaN(minimo) || isNaN(maximo)){}
     });
 });
