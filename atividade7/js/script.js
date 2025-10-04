@@ -31,7 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const url = `https://pokeapi.co/api/v2/pokemon/${idAleatorio}`; // URL da API do Pokémon
 
         try {
-        } 
+            const resposta = await fetch(url); // Faz a requisição para a API
+        
+        } catch (erro) {
+        }
 
     }
 });
