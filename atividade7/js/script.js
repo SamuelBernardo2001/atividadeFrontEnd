@@ -97,7 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     });
 
-
+// Função para normalizar a geração (a API retorna "generation-iii", etc)
+// Aqui convertemos para número para facilitar a resposta do usuário
 function converterGeracao(g) {
   const map = {
     "generation-i": "1",
@@ -110,7 +111,11 @@ function converterGeracao(g) {
     "generation-viii": "8",
     "generation-ix": "9"
   };
-  return map[g] || g;}
+  return map[g] || g; // Retorna o número se existir no mapa, senão retorna o valor original
+}
+
+    //criando um evento de clique para verificar o tipo do pokemon
+    document.getElementById("botao-pokemon-tipo").addEventListener("click", () => {});
 
 
 });
