@@ -68,11 +68,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (inputNome.value.toLowerCase() === pokemonEscolhido.nome) {
             // Compara o nome inserido com o nome do Pokémon
-            msgNome.textContent = "Correto!"; 
-            nomePokemon.textContent = pokemonEscolhido.nome;
-            imagemPokemon.style.filter = "brightness(1)";
-            etapaGeracao.classList.remove("hidden");   
-            etapaNome.classList.add("hidden");   
+            msgNome.textContent = "Correto!"; // Mensagem de acerto
+            nomePokemon.textContent = pokemonEscolhido.nome; // Mostra o nome do Pokémon
+            imagemPokemon.style.filter = "brightness(1)"; // Mostra a imagem em cores
+            etapaGeracao.classList.remove("hidden");   // Mostra a etapa da geração
+            etapaNome.classList.add("hidden");   // Esconde a etapa do nome
+        } else {
+           // Se errou, esconde tudo e força gerar outro Pokémon
+            msgNome.textContent = "❌ Errou! Gere outro Pokémon."; 
+            etapaNome.classList.add("hidden");  
+            imagemPokemon.style.display = "none"; 
+            pokemonEscolhido = null; 
         }
     });
 
