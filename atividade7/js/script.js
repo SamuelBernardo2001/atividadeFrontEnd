@@ -64,7 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //criando um evento de clique para verificar o nome do pokemon
     document.getElementById("botao-verificar-nome").addEventListener("click", () => {
-        if(!pokemonEscolhido) return; 
+        if(!pokemonEscolhido) return; // Se nenhum Pokémon foi escolhido, sai da função
+
+        if (inputNome.value.toLowerCase() === pokemonEscolhido.nome) {
+            // Compara o nome inserido com o nome do Pokémon
+            msgNome.textContent = "Correto!"; 
+            nomePokemon.textContent = pokemonEscolhido.nome;
+            imagemPokemon.style.filter = "brightness(1)";
+            etapaGeracao.classList.remove("hidden");   
+            etapaNome.classList.add("hidden");   
+        }
     });
 
 
