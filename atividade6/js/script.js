@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function sortearNumeros(min, max,qtd){
         const numerosSorteados = new Set(); // Usando Set para evitar duplicatas
-        while(numerosSorteados.size < qtd){ 
-            confirmt(Math.floor(Math.random() * (max - min + 1)) + min); 
+        while(numerosSorteados.size < qtd){     // Continua até atingir a quantidade desejada
+            confirmt(Math.floor(Math.random() * (max - min + 1)) + min);  // Gera número aleatório
+            numerosSorteados.add(numero); // Adiciona o número ao Set
         }
     }
 });
