@@ -16,5 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const msgGeracao = document.getElementById("mensagem-geracao");
     const msgTipo = document.getElementById("mensagem-tipo");
 
-    let pokemonEscolhido = null;
+    let pokemonEscolhido = null;    // Variável para armazenar o Pokémon escolhido
+
+    async function buscarPokemon() {  
+    
+    }
 });
