@@ -48,7 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const especieUrl = pokemonEscolhido.species.url; // URL para obter informações da espécie
         const especieResposta = await fetch(especieUrl);  // Faz a requisição para a URL da espécie
-        const especieDados = await especieResposta.json();
+        const especieDados = await especieResposta.json(); // Converte a resposta para JSON
+
+        pokemonEscolhido.geracao = especieDados.generation.name; 
 
     }
 });
