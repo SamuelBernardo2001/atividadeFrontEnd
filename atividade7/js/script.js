@@ -82,8 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    
-    document.getElementById("botao-verificar-geracao").addEventListener("click", () => {});
+    //criando um evento de clique para verificar a geraçao do pokemon
+    document.getElementById("botao-verificar-geracao").addEventListener("click", () => {
+        if(!pokemonEscolhido) return; 
+    });
 
 
 });
