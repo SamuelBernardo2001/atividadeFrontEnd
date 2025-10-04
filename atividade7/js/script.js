@@ -59,6 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (erro) {
             console.error('Erro:', erro); // Log de erro no console
         }
-        
+
     }
+
+    //criando um evento de clique para verificar o nome do pokemon
+    document.getElementById("botao-verificar-nome").addEventListener("click", () => {});
+
+
 });
