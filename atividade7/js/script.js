@@ -45,12 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // criando um objetivo mas simplificado para armazenar as informaçoes que queremos do pokemon
             pokemonEscolhido = {
                 nome: dados.name.toLowerCase(), // Nome do Pokémon em minúsculas
-                tipo: dados.types.map(t => t.types.name), // Array de tipos do Pokémon, Lista de tipos (pode ter 2 tipos)
+                tipo: dados.types.map(t => t.type.name), // ✅ Corrigido: era t.types.name
                 geracao: especieDados.generation.name, // Geração do Pokémon
                 imagem: dados.sprites.front_default // Imagem do Pokémon
             }
 
-             // Mostra a imagem como "sombra" (preto)
+            // Mostra a imagem como "sombra" (preto)
             nomePokemon.textContent = "???";
             imagemPokemon.src = pokemonEscolhido.imagem;
             imagemPokemon.style.display = "block";
@@ -94,25 +94,25 @@ document.addEventListener('DOMContentLoaded', () => {
             etapaTipo.classList.remove("hidden"); // Libera próxima etapa
             }else {
                  msgGeracao.textContent = `❌ Geração errada! Era ${geracaoPokemon}`; 
-    }
+        }
     });
 
-// Função para normalizar a geração (a API retorna "generation-iii", etc)
-// Aqui convertemos para número para facilitar a resposta do usuário
-function converterGeracao(g) {
-  const map = {
-    "generation-i": "1",
-    "generation-ii": "2",
-    "generation-iii": "3",
-    "generation-iv": "4",
-    "generation-v": "5",
-    "generation-vi": "6",
-    "generation-vii": "7",
-    "generation-viii": "8",
-    "generation-ix": "9"
-  };
-  return map[g] || g; // Retorna o número se existir no mapa, senão retorna o valor original
-}
+    // Função para normalizar a geração (a API retorna "generation-iii", etc)
+    // Aqui convertemos para número para facilitar a resposta do usuário
+    function converterGeracao(g) {
+      const map = {
+        "generation-i": "1",
+        "generation-ii": "2",
+        "generation-iii": "3",
+        "generation-iv": "4",
+        "generation-v": "5",
+        "generation-vi": "6",
+        "generation-vii": "7",
+        "generation-viii": "8",
+        "generation-ix": "9"
+      };
+      return map[g] || g; // Retorna o número se existir no mapa, senão retorna o valor original
+    }
 
     //criando um evento de clique para verificar o tipo do pokemon
     document.getElementById("botao-pokemon-tipo").addEventListener("click", () => {
@@ -123,44 +123,45 @@ function converterGeracao(g) {
         let acertou = false;    // Flag para verificar se acertou
 
         // Verifica se a resposta está dentro das traduções permitidas (PT ou EN)
-        for(let t of (tiposPokemon)){
+        for(let t of tiposPokemon){
             if(tiposPT[t] && tiposPT[t].includes(respostaUsuario)){ 
                 acertou = true; // Marca como acertou se encontrar correspondência
-            break; // Sai do loop se acertou
+                break; // Sai do loop se acertou
             }
-            if (acertou) {
-                msgTipo.textContent = "🎉 Parabéns! Acertou todas!";
-            } else {
-                msgTipo.textContent = "❌ Tipo errado!";
-            }
+        }
+
+        // ✅ Corrigido: mover o if (acertou) para fora do loop
+        if (acertou) {
+            msgTipo.textContent = "🎉 Parabéns! Acertou todas!";
+        } else {
+            msgTipo.textContent = "❌ Tipo errado!";
         }
     });
 
-// Mapeamento de traduções para os tipos de Pokémon
-// Cada chave é o tipo em inglês (como vem da API), e os valores são as formas aceitas pelo usuário
-const tiposPT = {
-  grass: ["grass", "planta", "leaf"],
-  fire: ["fire", "fogo"],
-  water: ["water", "água", "agua"],
-  electric: ["electric", "elétrico", "eletrico"],
-  bug: ["bug", "inseto"],
-  normal: ["normal"],
-  flying: ["flying", "voador"],
-  poison: ["poison", "veneno"],
-  ground: ["ground", "terra"],
-  rock: ["rock", "pedra"],
-  fighting: ["fighting", "lutador", "luta"],
-  psychic: ["psychic", "psíquico", "psiquico"],
-  ghost: ["ghost", "fantasma"],
-  ice: ["ice", "gelo"],
-  dragon: ["dragon", "dragão", "dragao"],
-  dark: ["dark", "noturno"],
-  steel: ["steel", "aço", "aco"],
-  fairy: ["fairy", "fada"]
-};
+    // Mapeamento de traduções para os tipos de Pokémon
+    // Cada chave é o tipo em inglês (como vem da API), e os valores são as formas aceitas pelo usuário
+    const tiposPT = {
+      grass: ["grass", "planta", "leaf"],
+      fire: ["fire", "fogo"],
+      water: ["water", "água", "agua"],
+      electric: ["electric", "elétrico", "eletrico"],
+      bug: ["bug", "inseto"],
+      normal: ["normal"],
+      flying: ["flying", "voador"],
+      poison: ["poison", "veneno"],
+      ground: ["ground", "terra"],
+      rock: ["rock", "pedra"],
+      fighting: ["fighting", "lutador", "luta"],
+      psychic: ["psychic", "psíquico", "psiquico"],
+      ghost: ["ghost", "fantasma"],
+      ice: ["ice", "gelo"],
+      dragon: ["dragon", "dragão", "dragao"],
+      dark: ["dark", "noturno"],
+      steel: ["steel", "aço", "aco"],
+      fairy: ["fairy", "fada"]
+    };
 
-// Quando o usuário clica no botão "Gerar Pokémon"
-  botaoPokemon.addEventListener("click", gerarPokemon);
-
+    // Quando o usuário clica no botão "Gerar Pokémon"
+    botaoPokemon.addEventListener("click", buscarPokemon); // ✅ Corrigido: função correta
 
 });
