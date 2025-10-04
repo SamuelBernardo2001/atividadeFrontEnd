@@ -39,7 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
             pokemonEscolhido = dados; // Armazena os dados do Pokémon escolhido
 
             nomePokemon.textContent = "???"; // Oculta o nome do Pokémon inicialmente
-            imagemPokemon.src = dados.sprites.front_default; 
+            imagemPokemon.src = dados.sprites.front_default; // Define a imagem do Pokémon
+            imagemPokemon.alt = dados.name; // Define o texto alternativo da imagem
 
         } catch (erro) {
         }
