@@ -86,7 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("botao-verificar-geracao").addEventListener("click", () => {
         if(!pokemonEscolhido) return; // Se nenhum Pokémon foi escolhido, sai da função
 
-        const respostaUsuario = inputGeracao.value.toLowerCase().trim(); 
+        const respostaUsuario = inputGeracao.value.toLowerCase().trim(); // Obtém a resposta do usuário
+        const geracaoPokemon = converterGeracao(pokemonEscolhido.geracao); 
     });
 
 
