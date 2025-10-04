@@ -32,9 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             const resposta = await fetch(url); // Faz a requisição para a API
-            if (!resposta.ok) { 
+            if (!resposta.ok) { // Verifica se a resposta foi bem-sucedida
                 throw new Error('Erro ao buscar o Pokémon');
             }
+            const dados = await resposta.json();
+           
 
         } catch (erro) {
         }
