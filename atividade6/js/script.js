@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("Preencha todos os campos corretamente"); // Valida se os campos estão preenchidos corretamente
         } else if (minimo >= maximo) {
             alert("O valor minimo deve ser menor que o maximo"); // Valida se o valor mínimo é menor que o máximo
+        } else if (quantidade > (maximo - minimo + 1)) {
+            alert("A quantidade de números solicitada excede o intervalo disponível."); // Valida se a quantidade solicitada é possível dentro do intervalo
         }
     });
 });
