@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Erro:', erro); // Log de erro no console
         }
 
-        const especieUrl = pokemonEscolhido.species.url; 
-       
+        const especieUrl = pokemonEscolhido.species.url; // URL para obter informações da espécie
+        const especieResposta = await fetch(especieUrl); 
 
     }
 });
