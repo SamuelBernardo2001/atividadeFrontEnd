@@ -43,8 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
             imagemPokemon.alt = dados.name; // Define o texto alternativo da imagem
 
         } catch (erro) {
-            console.error('Erro:', erro);
+            console.error('Erro:', erro); // Log de erro no console
         }
+
+        const especieUrl = pokemonEscolhido.species.url; 
+       
 
     }
 });
