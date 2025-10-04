@@ -15,4 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const msgNome = document.getElementById("mensagem-nome");
     const msgGeracao = document.getElementById("mensagem-geracao");
     const msgTipo = document.getElementById("mensagem-tipo");
+
+    let pokemonEscolhido = null;
 });
