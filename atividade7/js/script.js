@@ -116,11 +116,16 @@ function converterGeracao(g) {
 
     //criando um evento de clique para verificar o tipo do pokemon
     document.getElementById("botao-pokemon-tipo").addEventListener("click", () => {
-        if(!pokemonEscolhido) return; 
+        if(!pokemonEscolhido) return; // Se nenhum Pokémon foi escolhido, sai da função
         
-        const respostaUsuario = inputTipo.value.toLowerCase().trim();   
-        const tiposPokemon = pokemonEscolhido.tipo; 
-        let acertou = false; 
+        const respostaUsuario = inputTipo.value.toLowerCase().trim();   // Obtém a resposta do usuário
+        const tiposPokemon = pokemonEscolhido.tipo; // Lista de tipos do Pokémon
+        let acertou = false;    // Flag para verificar se acertou
+
+        
+        for(let t of (tiposPokemon)){
+
+        }
     });
 
 
