@@ -35,7 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!resposta.ok) { // Verifica se a resposta foi bem-sucedida
                 throw new Error('Erro ao buscar o Pokémon');
             }
-            const dados = await resposta.json();
+            const dados = await resposta.json(); // Converte a resposta para JSON
+            pokemonEscolhido = dados;
+
+            nomePokemon.textContent = "???";
            
 
         } catch (erro) {
