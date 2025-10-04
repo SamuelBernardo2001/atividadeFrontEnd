@@ -38,13 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const dados = await resposta.json(); // Converte a resposta para JSON
             pokemonEscolhido = dados; // Armazena os dados do Pokémon escolhido
 
-            nomePokemon.textContent = "???"; // Oculta o nome do Pokémon inicialmente
-            imagemPokemon.src = dados.sprites.front_default; // Define a imagem do Pokémon
-            imagemPokemon.alt = dados.name; // Define o texto alternativo da imagem
+            const especieUrl = pokemonEscolhido.species.url; // URL para obter informações da espécie
+            const especieResposta = await fetch(especieUrl);  // Faz a requisição para a URL da espécie
+            const especieDados = await especieResposta.json(); // Converte a resposta para JSON
 
-                const especieUrl = pokemonEscolhido.species.url; // URL para obter informações da espécie
-                const especieResposta = await fetch(especieUrl);  // Faz a requisição para a URL da espécie
-                const especieDados = await especieResposta.json(); // Converte a resposta para JSON
+            // criando um objetivo mas simplificado para armazenar as informaçoes que queremos do pokemon
+            pokemonEscolhido = {
+    
+            }
 
         } catch (erro) {
             console.error('Erro:', erro); // Log de erro no console
