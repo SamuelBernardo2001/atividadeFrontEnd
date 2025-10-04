@@ -14,5 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     botaoSorteio.addEventListener('click', (event) => {
         const quantidade = parseInt(document.getElementById('quantidade').value); // Obtém a quantidade de números
+        const minimo = parseInt(document.getElementById('minimo').value);
     });
 });
