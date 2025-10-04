@@ -124,8 +124,14 @@ function converterGeracao(g) {
 
         // Verifica se a resposta está dentro das traduções permitidas (PT ou EN)
         for(let t of (tiposPokemon)){
-            if(tiposPT[t] && tiposPT[t].includes(respostaUsuario)){
-                acertou = true; 
+            if(tiposPT[t] && tiposPT[t].includes(respostaUsuario)){ 
+                acertou = true; // Marca como acertou se encontrar correspondência
+            break; // Sai do loop se acertou
+            }
+            if (acertou) {
+                msgTipo.textContent = "🎉 Parabéns! Acertou todas!";
+            } else {
+                msgTipo.textContent = "❌ Tipo errado!";
             }
         }
     });
