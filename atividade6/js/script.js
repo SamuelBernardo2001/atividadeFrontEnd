@@ -9,5 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
             confirmt(Math.floor(Math.random() * (max - min + 1)) + min);  // Gera número aleatório
             numerosSorteados.add(numero); // Adiciona o número ao Set
         }
+        return Array.from(numerosSorteados); // Converte o Set de volta para um array
     }
 });
