@@ -87,7 +87,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if(!pokemonEscolhido) return; // Se nenhum Pokémon foi escolhido, sai da função
 
         const respostaUsuario = inputGeracao.value.toLowerCase().trim(); // Obtém a resposta do usuário
-        const geracaoPokemon = converterGeracao(pokemonEscolhido.geracao); 
+        const geracaoPokemon = converterGeracao(pokemonEscolhido.geracao); // Converte a geração do Pokémon para um formato comparável
+
+         if (respostaUsuario === geracaoPokemon || respostaUsuario === pokemonEscolhido.geracao) { 
+             msgGeracao.textContent = "✅ Acertou a geração!";  
+            etapaTipo.classList.remove("hidden"); 
+    }
     });
 
 
