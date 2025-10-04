@@ -124,10 +124,14 @@ function converterGeracao(g) {
 
         // Verifica se a resposta está dentro das traduções permitidas (PT ou EN)
         for(let t of (tiposPokemon)){
-            
+            if(tiposPT[t] && tiposPT[t].includes(respostaUsuario)){
+                acertou = true; 
+            }
         }
     });
 
+// Mapeamento de traduções para os tipos de Pokémon
+// Cada chave é o tipo em inglês (como vem da API), e os valores são as formas aceitas pelo usuário
 const tiposPT = {
   grass: ["grass", "planta", "leaf"],
   fire: ["fire", "fogo"],
