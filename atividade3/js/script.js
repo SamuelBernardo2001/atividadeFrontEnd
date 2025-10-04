@@ -18,6 +18,7 @@ function validarCampos(nome, idade, cidade){
     return true; // garante que retorna verdadeiro
 }
 
+// Evento de clique no botão Cadastrar
 botaoCadastrar.addEventListener('click', () => {
     const nome = document.getElementById('nome').value.trim(); // recebendo o nome
     const idade = document.getElementById('idade').value.trim(); // recebendo a idade
@@ -25,11 +26,13 @@ botaoCadastrar.addEventListener('click', () => {
    
     if(validarCampos(nome, idade, cidade)){ // Verifica se os campos são válidos
         alert("Cadastrado com sucesso")
+        adicionarLinha(nome, idade, cidade); // Adiciona nova linha na tabela
         form.reset(); // Limpa o formulário após cadastro
     }
 }
 )
 
+// Função para adicionar uma linha à tabela
 function adicionarLinha(nome, idade, cidade) {
     const novaLinha = document.createElement('tr'); // Cria uma nova linha
     novaLinha.innerHTML = `
