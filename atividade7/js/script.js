@@ -50,6 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 imagem: dados.sprites.front_default // Imagem do Pokémon
             }
 
+             // Mostra a imagem como "sombra" (preto)
+            nomePokemon.textContent = "???";
+            imagemPokemon.src = pokemonEscolhido.imagem;
+            imagemPokemon.style.display = "block";
+            imagemPokemon.style.filter = "brightness(0)"; // Escurece a imagem (sombra)
+
         } catch (erro) {
             console.error('Erro:', erro); // Log de erro no console
         }
