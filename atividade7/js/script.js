@@ -122,11 +122,32 @@ function converterGeracao(g) {
         const tiposPokemon = pokemonEscolhido.tipo; // Lista de tipos do Pokémon
         let acertou = false;    // Flag para verificar se acertou
 
-        
+        // Verifica se a resposta está dentro das traduções permitidas (PT ou EN)
         for(let t of (tiposPokemon)){
-
+            
         }
     });
+
+const tiposPT = {
+  grass: ["grass", "planta", "leaf"],
+  fire: ["fire", "fogo"],
+  water: ["water", "água", "agua"],
+  electric: ["electric", "elétrico", "eletrico"],
+  bug: ["bug", "inseto"],
+  normal: ["normal"],
+  flying: ["flying", "voador"],
+  poison: ["poison", "veneno"],
+  ground: ["ground", "terra"],
+  rock: ["rock", "pedra"],
+  fighting: ["fighting", "lutador", "luta"],
+  psychic: ["psychic", "psíquico", "psiquico"],
+  ghost: ["ghost", "fantasma"],
+  ice: ["ice", "gelo"],
+  dragon: ["dragon", "dragão", "dragao"],
+  dark: ["dark", "noturno"],
+  steel: ["steel", "aço", "aco"],
+  fairy: ["fairy", "fada"]
+};
 
 
 });
