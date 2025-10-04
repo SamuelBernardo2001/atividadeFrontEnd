@@ -30,5 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const idAleatorio = Math.floor(Math.random() * 898) + 1; // Gera um ID aleatório entre 1 e 898
         const url = `https://pokeapi.co/api/v2/pokemon/${idAleatorio}`; // URL da API do Pokémon
 
+        try {
+        } 
+
     }
 });
