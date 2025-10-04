@@ -6,13 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function sortearNumeros(min, max,qtd){
         const numerosSorteados = new Set(); // Usando Set para evitar duplicatas
         while(numerosSorteados.size < qtd){     // Continua até atingir a quantidade desejada
-            confirmt(Math.floor(Math.random() * (max - min + 1)) + min);  // Gera número aleatório
+            const numero = (Math.floor(Math.random() * (max - min + 1)) + min);  // Gera número aleatório
             numerosSorteados.add(numero); // Adiciona o número ao Set
         }
         return Array.from(numerosSorteados); // Converte o Set de volta para um array
     }
 
     botaoSorteio.addEventListener('click', (event) => {
+        event.preventDefault(); // Previne o envio do formulário
         const quantidade = parseInt(document.getElementById('quantidade').value); // Obtém a quantidade de números
         const minimo = parseInt(document.getElementById('minimo').value); // Obtém o valor mínimo
         const maximo = parseInt(document.getElementById('maximo').value); // Obtém o valor máximo
