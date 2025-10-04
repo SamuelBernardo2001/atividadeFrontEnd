@@ -19,8 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let pokemonEscolhido = null;    // Variável para armazenar o Pokémon escolhido
 
     async function buscarPokemon() {  
-        msgNome.textContent = "";
-        msgGeracao.textContent = "";
-        msgTipo.textContent = "";
+        msgNome.textContent = "";   // Limpa mensagens anteriores
+        msgGeracao.textContent = "";    // Limpa mensagens anteriores
+        msgTipo.textContent = "";   // Limpa mensagens anteriores
+
+        etapaNome.classList.remove("hidden");   // Mostra a etapa do nome para o usuário primeiro inicia com o nome
+        etapaGeracao.classList.add("hidden");   // Esconde as outras etapas para so aparece quando o usuario acertar o nome
+        etapaTipo.classList.add("hidden");  // Esconde as outras etapas para so aparece quando o usuario acertar o nome e geraçao
+
+
     }
 });
