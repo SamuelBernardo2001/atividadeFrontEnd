@@ -115,7 +115,13 @@ function converterGeracao(g) {
 }
 
     //criando um evento de clique para verificar o tipo do pokemon
-    document.getElementById("botao-pokemon-tipo").addEventListener("click", () => {});
+    document.getElementById("botao-pokemon-tipo").addEventListener("click", () => {
+        if(!pokemonEscolhido) return; 
+        
+        const respostaUsuario = inputTipo.value.toLowerCase().trim();   
+        const tiposPokemon = pokemonEscolhido.tipo; 
+        let acertou = false; 
+    });
 
 
 });
