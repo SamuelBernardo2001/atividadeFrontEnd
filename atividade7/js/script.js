@@ -75,12 +75,15 @@ document.addEventListener('DOMContentLoaded', () => {
             etapaNome.classList.add("hidden");   // Esconde a etapa do nome
         } else {
            // Se errou, esconde tudo e força gerar outro Pokémon
-            msgNome.textContent = "❌ Errou! Gere outro Pokémon."; 
-            etapaNome.classList.add("hidden");  
-            imagemPokemon.style.display = "none"; 
-            pokemonEscolhido = null; 
+            msgNome.textContent = "❌ Errou! Gere outro Pokémon."; // Mensagem de erro
+            etapaNome.classList.add("hidden");  // Esconde a etapa do nome
+            imagemPokemon.style.display = "none"; // Esconde a imagem
+            pokemonEscolhido = null; // Reseta o Pokémon escolhido
         }
     });
+
+    
+    document.getElementById("botao-verificar-geracao").addEventListener("click", () => {});
 
 
 });
